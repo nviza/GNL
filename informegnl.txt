@@ -1,0 +1,26 @@
+INFORME DE LA ELABORACIÓN DEL GNL
+
+1. Iniciamos esta aventura creando los 4 archivos importantes get_next_line.c, get_next_line_utils.c,
+get_next_line.h y el Makefile.
+
+Según el subjet, tenemos que trabajar con 2 parámetros muy importante #1 El file descriptor 
+sobre el que leer y #2 El valor de lo que se ha leído.
+
+Luego tenemos valores de retorno muy imporatantes a tener en cuenta "1" (se ha leido una línea), "0"(se ha terminado la lectura),
+"-1"(Ha ocurrido un error). Esto quiere decir que si se ha leído una línea, el valor de retorno es "1"
+si se termina de leer el archivose devuelva un "0" y si en el proceso ha ocurrido un error se devuelva un "-1".
+
+Es necesario para realizar el proyecto entender tres funciones muy importantes: Read, Malloc y free.
+
+Read es una función que estudia bytes de datos del archivo asociado
+con el descriptor de archivo fichero (fd) y los coloca en el área de datos buffer.
+Envía el número de bytes de datos que se han leído realmente, que puede ser menor que el número solicitado.
+Si una llamada read envía 0, no tiene nada que leer porque ha alcanzado el final del archivo.
+Un error de llamada hará que envíe -1.
+
+        read(fd, buffer, nbytes)
+
+Sin embargo antes de eso debemos abrir el fichero que pretendemos leer. En este caso usariamos:
+
+        int fd == open ("fd", O_RDONLY)
+
