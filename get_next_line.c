@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   get_next_line.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nviza-eu <nviza-eu@student.42.fr>          +#+  +:+       +#+        */
+/*   By: user42 <user42@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/10/09 18:48:03 by nviza-eu          #+#    #+#             */
-/*   Updated: 2020/10/09 19:20:12 by nviza-eu         ###   ########.fr       */
+/*   Created: 2020/10/14 18:41:06 by user42            #+#    #+#             */
+/*   Updated: 2020/10/14 18:47:24 by user42           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,7 @@ int         get_next_line(const int fd, char **line);
     
 read(fd, buffer, nbytes);
 close(fd);
+}
 
 
 }
